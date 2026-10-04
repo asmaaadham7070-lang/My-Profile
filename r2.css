@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+header {
+    background-color: #575656;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    box-shadow: 0 4px 5px #e8aad28f;
+}
+
+.logo {
+    text-decoration: none;
+    color: rgb(243, 235, 237);
+    background-color: rgb(219, 70, 144);
+    padding: 5px 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(251, 242, 245);
+    margin-left: 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: rgb(223, 216, 216);
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.mein {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(smsm.jpeg);
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    background-size: 25% auto;
+}
+
+.mein h2 {
+    color: rgb(244, 241, 242);
+    font-size: 2em;
+    font-weight: 900;
+    margin: 20px 0;
+}
+
+.mein h3 {
+    color: rgb(233, 224, 229);
+    font-size: 1.4em;
+    font-weight: 900;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: rgb(201, 29, 109);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    transition: all 0.7s ease;
+}
+
+.btn:hover {
+    background-color: rgb(226, 233, 226);
+}
+
+.mein .btn:hover {
+    background: rgb(229, 10, 171);
+    transform: scale(1.1);
+}
+
+.soo {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    font-size: 1.7em;
+}
+
+.soo a {
+    color: rgb(255, 255, 255);
+    transition: transform 0.3s ease;
+}
+
+.soo a:hover {
+    transform: scale(1.2);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgb(241, 235, 238);
+    width: 21.25em;
+    box-shadow: 0 6px 8px 0 rgba(183, 185, 193, 0.2);
+    border-radius: 15px;
+    padding: 15px;
+    transition: all 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(59, 37, 227, 0.2);
+}
+
+.icon {
+    font-size: 4em;
+    color: rgb(58, 86, 208);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.b {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* التجاوب مع الموبايل والشاشات الصغيره */
+@media (max-width: 1023px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    
+    .navigation a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+    
+    section {
+        padding: 80px 20px;
+    }
+
+    .mein {
+        background-position: center bottom;
+        background-size: 50% auto;
+        text-align: center;
+    }
+}
