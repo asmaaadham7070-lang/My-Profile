@@ -21,7 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px;
+    padding: 15px 5%;
     box-shadow: 0 4px 5px #e8aad28f;
 }
 
@@ -50,7 +50,7 @@ header {
 }
 
 section {
-    padding: 100px 200px;
+    padding: 100px 5%;
 }
 
 .mein {
@@ -169,26 +169,40 @@ img {
     object-fit: cover;
     border-radius: 15px;
 }
-
-/* التجاوب مع الموبايل والشاشات الصغيره */
-@media (max-width: 1023px) {
+/* التجاوب مع الموبايل والشاشات الصغيرة */
+@media (max-width: 768px) {
     header {
         flex-direction: column;
+        gap: 10px;
         padding: 10px 20px;
     }
-    
+
+    .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
     .navigation a {
-        margin: 0 10px;
+        margin-left: 0;
         font-size: 1em;
     }
-    
+
     section {
-        padding: 80px 20px;
+        padding: 120px 20px 40px 20px;
     }
 
     .mein {
         background-position: center bottom;
-        background-size: 50% auto;
+        background-size: 180px auto;
         text-align: center;
+        align-items: center;
+        padding-bottom: 200px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
     }
 }
