@@ -174,7 +174,7 @@ img {
     header {
         flex-direction: column;
         gap: 10px;
-        padding: 10px 20px;
+        padding: 15px 10px;
     }
 
     .navigation {
@@ -186,19 +186,32 @@ img {
 
     .navigation a {
         margin-left: 0;
-        font-size: 1em;
+        font-size: 0.95em;
     }
 
     section {
-        padding: 120px 20px 40px 20px;
+        padding: 100px 20px 40px 20px;
     }
 
     .mein {
-        background-position: center bottom;
-        background-size: 180px auto;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding-bottom: 200px;
+        text-align: center;
+        min-height: 100vh;
+        /* ترتيب الصورة والمساحة الخاصة بها */
+        background-position: center bottom 30px;
+        background-size: 180px auto;
+        padding-bottom: 230px;
+    }
+
+    .mein h2 {
+        font-size: 1.6em;
+    }
+
+    .mein h3 {
+        font-size: 1.2em;
     }
 
     .card {
