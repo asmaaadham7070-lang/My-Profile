@@ -54,16 +54,31 @@ section {
 }
 
 .mein {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-image: url(smsm.jpeg);
-    background-position: 80% center;
-    background-repeat: no-repeat;
-    background-size: 25% auto;
+    padding: 0 8%;
 }
 
+.profile-img {
+    width: 380px; /* مقاس متناسق جداً مع الشاشة */
+    height: 380px; /* نفس العرض عشان تفضل دائرة */
+    border-radius: 50%; /* أهم حاجة علامة الـ % */
+    object-fit: cover;
+    object-position: top center;
+    flex-shrink: 0; /* بيمنع مط أو ضغط الصورة */
+    border: 3px solid rgb(219, 70, 144);
+    box-shadow: 0 10px 25px rgba(219, 70, 144, 0.35);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.profile-img:hover {
+    transform: scale(1.05); /* تكبر بنسبة بسيطة ناعمة مع الحجم الكبيرة ده */
+    border-color: #ff1493;
+    box-shadow: 0 15px 35px rgba(255, 20, 147, 0.6);
+}
 .mein h2 {
     color: rgb(244, 241, 242);
     font-size: 2em;
@@ -217,5 +232,20 @@ img {
     .card {
         width: 100%;
         max-width: 320px;
+    }
+}
+/* التجاوب مع شاشات الموبايل (حطي الكود ده في نهاية ملف r2.css) */
+@media (max-width: 768px) {
+    .mein {
+        flex-direction: column-reverse; /* تعكس الترتيب: الصورة فوق والكلام تحت */
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .profile-img {
+        width: 230px;  /* تصغير الحجم ليناسب عرض الفون */
+        height: 230px; /* الارتفاع زي العرض للحفاظ على الدائرة */
+        margin: 0 auto; /* توسيط الصورة في المنتصف */
     }
 }
