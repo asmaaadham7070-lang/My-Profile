@@ -252,111 +252,33 @@ img {
 /* ========================================== */
 
 @media (max-width: 800px) {
-    header {
-        display: flex;
-        flex-direction: row;        /* العناصر بجانب بعضها أفقياً */
-        align-items: center;        /* محاذاة رأسية في المنتصف */
-        justify-content: space-between; /* توزيع العناصر يميناً ويساراً */
-        padding: 8px 12px; 
-        width: 100%;
-        box-sizing: border-box;     /* مهم جداً عشان الـ padding ما يوسعش العنصر بره الشاشة */
-        gap: 8px;                   
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        background-color: #000;     /* يفضل تحديد خلفية عشان الـ fixed ما يشفش الكلام اللي تحته */
+    /* 1. تكبير عناصر الـ Hero Section وتنظيمها */
+    .hero-container, main {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px; /* مسافة عشان الهيدر الثابت */
     }
- 
-    .navigation {
+
+    /* 2. تكبير الكروت لتملأ عرض الموبايل */
+    .product-card, .detail-card {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    /* 3. جعل الـ Grid يعرض كارت واحد في السطر */
+    .projects-grid, .details-grid {
         display: flex;
-        gap: 10px;
-        font-size: 11px;            /* رفعنا المقاس شوية عشان يكون مقروء ع الموبايل */
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        flex-wrap: nowrap;          
-    }
-
-    .logo {
-        font-size: 12px;            /* مكبرة اللوجو شوية عشان ما يبقاش نقطة صعبة القراءة */
-        text-align: left;
-    }
-
-    .ph {
-        height: 260px; 
-    }
-
-    .s {
-        font-size: 18px;
-        padding: 0 10px;
-    }
-
-    .flower-text {
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .products-grid {
-        gap: 15px;
-        padding: 10px 5px;
-    }
-
-    .product-card {
-        width: 92%; 
-    }
-
-    .img {
-        height: 280px; 
-    }
-
-    /* تنسيق الحاضر أو الفورم نفسها */
-    form {
         width: 100%;
-        max-width: 450px; 
-        margin: 0 auto;
-        padding: 20px;
-        box-sizing: border-box; 
     }
 
-    /* تنسيق حقول الإدخال والـ Textarea */
-    form input,
-    form textarea {
-        width: 100%; 
-        padding: 12px 15px;
-        margin-bottom: 15px; 
-        border: 1px solid #333;
-        border-radius: 8px;
-        background-color: #1a1a1a;
-        color: #fff;
-        font-size: 16px; 
-        box-sizing: border-box; 
-        outline: none;
-        transition: border-color 0.3s ease;
+    /* 4. تكبير خطوط العناوين والروابط عشان تملأ الفراغ */
+    .s, .flower-text {
+        font-size: 20px;
     }
-
-    form input:focus,
-    form textarea:focus {
-        border-color: #ff33aa; 
-    }
-
-    form .btn {
-        width: 100%;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        background-color: #cf0a6c;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    form .btn:hover {
-        opacity: 0.9;
-        background-color: #555454;
+    
+    .navigation {
+        font-size: 11px;
     }
 }
