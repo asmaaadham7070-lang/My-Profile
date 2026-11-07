@@ -265,57 +265,47 @@ img {
 /* ========================================== */
 /* إعدادات التجاوب مع الموبايل (Media Queries) */
 /* ========================================== */
-
 @media (max-width: 900px) {
-     header {
-        flex-direction: column;
+    /* 1. ضبط الهيدر ليظهر بشكل ممتاز ومنظم على الموبايل */
+    header {
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        text-align: center;
-        height: auto; 
-        flex-direction: row;        /* جعل العناصر بجانب بعضها أفقياً */
-        align-items: center;        /* محاذاة رأسية في المنتصف */
-        justify-content: space-between; /* توزيع العناصر يميناً ويساراً */
-        padding: 8px 10px; /* بنقلل الهوامش فوق وتحت عشان ينحف */
+        justify-content: space-between;
+        padding: 8px 12px;
         width: 100%;
-        gap: 5px;          /* مسافة صغيرة جداً بين العناصر */
         position: fixed;
-        display:flex;
-        justify-content: center;
-        font-size: 12px;
         top: 0;
         left: 0;
         z-index: 1000;
+        box-sizing: border-box;
     }
-   
-    .a{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    
-    
-    /* الإطار الأبيض والبروز */
-    border: 1.5px solid #323030; 
-    border-radius: 8px; /* تدوير الحواف عشان يبان زرار احترافي */
-    padding: 4px 10px; /* مساحة داخلية خفيفة حول النص */
-    gap: 5px;
-    transition: all 0.25s ease-in-out; /* نعومة الحركة */
-    cursor: pointer;
-}
-    /* 1. تكبير عناصر الـ Hero Section وتنظيمها */
+
+    /* تكبير وتنسيق روابط الهيدر لتكون واضحة */
+    header nav a, .a, .navigation {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    /* 2. تنظيم الـ Hero Section والـ Main */
     .hero-container, main {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        padding-top: 80px; /* مسافة عشان الهيدر الثابت */
-    }
-
-    /* 2. تكبير الكروت لتملأ عرض الموبايل */
-    .product-card, .detail-card {
+        padding-top: 90px; /* مسافة كافية تحت الهيدر الثابت */
         width: 100%;
-        max-width: 100%;
+        box-sizing: border-box;
     }
 
-    /* 3. جعل الـ Grid يعرض كارت واحد في السطر */
+    /* 3. جعل الكروت تملأ عرض الشاشة بشكل مريح وبدون تصغير */
+    .product-card, .detail-card {
+        width: 90%;
+        max-width: 400px;
+        margin: 10px auto;
+    }
+
+    /* 4. جعل حاويات الكروت تعرض كارت واحد في السطر */
     .projects-grid, .details-grid {
         display: flex;
         flex-direction: column;
@@ -323,13 +313,16 @@ img {
         width: 100%;
     }
 
-    /* 4. تكبير خطوط العناوين والروابط عشان تملأ الفراغ */
+    /* 5. ضبط العناوين لتناسب الشاشات الصغيرة */
     .s, .flower-text {
-        font-size:30px;
+        font-size: 26px;
     }
-    
+
     .navigation {
-        font-size: 10px;
+        font-size: 12px;
         display: flex;
+    }
+    .logo{
+        font-size: 17px;
     }
 }
