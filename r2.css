@@ -251,7 +251,38 @@ img {
 /* إعدادات التجاوب مع الموبايل (Media Queries) */
 /* ========================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+     header {
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto; 
+        flex-direction: row;        /* جعل العناصر بجانب بعضها أفقياً */
+        align-items: center;        /* محاذاة رأسية في المنتصف */
+        justify-content: space-between; /* توزيع العناصر يميناً ويساراً */
+        padding: 8px 10px; /* بنقلل الهوامش فوق وتحت عشان ينحف */
+        width: 100%;
+        gap: 1px;          /* مسافة صغيرة جداً بين العناصر */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    .a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+    /* الإطار الأبيض والبروز */
+    border: 1.5px solid #ffffff; 
+    border-radius: 8px; /* تدوير الحواف عشان يبان زرار احترافي */
+    padding: 4px 10px; /* مساحة داخلية خفيفة حول النص */
+    
+    transition: all 0.25s ease-in-out; /* نعومة الحركة */
+    cursor: pointer;
+}
     /* 1. تكبير عناصر الـ Hero Section وتنظيمها */
     .hero-container, main {
         flex-direction: column;
@@ -275,10 +306,10 @@ img {
 
     /* 4. تكبير خطوط العناوين والروابط عشان تملأ الفراغ */
     .s, .flower-text {
-        font-size: 20px;
+        font-size:30px;
     }
     
     .navigation {
-        font-size: 11px;
+        font-size: 20px;
     }
 }
