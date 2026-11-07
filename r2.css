@@ -251,35 +251,39 @@ img {
 /* إعدادات التجاوب مع الموبايل (Media Queries) */
 /* ========================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header {
-      display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: auto; 
-        flex-direction: row;        /* جعل العناصر بجانب بعضها أفقياً */
+        display: flex;
+        flex-direction: row;        /* العناصر بجانب بعضها أفقياً */
         align-items: center;        /* محاذاة رأسية في المنتصف */
         justify-content: space-between; /* توزيع العناصر يميناً ويساراً */
-        padding: 8px 10px; /* بنقلل الهوامش فوق وتحت عشان ينحف */
+        padding: 8px 12px; 
         width: 100%;
-        gap: 1px;          /* مسافة صغيرة جداً بين العناصر */
+        box-sizing: border-box;     /* مهم جداً عشان الـ padding ما يوسعش العنصر بره الشاشة */
+        gap: 8px;                   
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1000;
+        background-color: #000;     /* يفضل تحديد خلفية عشان الـ fixed ما يشفش الكلام اللي تحته */
     }
-  
-    .navigation{
-        gap: 7px;
-        font-size: 8px;
+ 
+    .navigation {
+        display: flex;
+        gap: 10px;
+        font-size: 11px;            /* رفعنا المقاس شوية عشان يكون مقروء ع الموبايل */
         justify-content: center;
-        flex-wrap: nowrap;          /* لمنع النزول لسطر جديد لو المساحة تسمح أو حسب رغبتك */
-        display: flex
+        align-items: center;
+        flex-wrap: nowrap;          
+    }
+
+    .logo {
+        font-size: 12px;            /* مكبرة اللوجو شوية عشان ما يبقاش نقطة صعبة القراءة */
+        text-align: left;
     }
 
     .ph {
-        height: 260px; /* تقليل ارتفاع صورة الغلاف في الموبايل */
+        height: 260px; 
     }
 
     .s {
@@ -301,63 +305,58 @@ img {
     }
 
     .product-card {
-        width: 92%; /* جعل الكارد يأخذ أغلب عرض شاشة الموبايل */
+        width: 92%; 
     }
 
     .img {
-        height: 280px; /* تناسب ارتفاع الصورة مع شاشة الموبايل */
+        height: 280px; 
     }
-    .logo{
-        font-size: 8px;
-        text-align: left;
+
+    /* تنسيق الحاضر أو الفورم نفسها */
+    form {
+        width: 100%;
+        max-width: 450px; 
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box; 
     }
-    /* تنسيق الحاضن أو الفورم نفسها */
-form {
-  width: 100%;
-  max-width: 450px; /* بيخلي الفورم متكبرش عن الحجم ده في الشاشات الكبيرة، وبتصغر أوتوماتيك على الموبايل */
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box; /* مهم جداً عشان الـ padding ما يخلش الحجم يتخطى العرض 100% */
-}
 
-/* تنسيق حقول الإدخال والـ Textarea */
-form input,
-form textarea {
-  width: 100%; /* تملى عرض الفورم بالكامل مهما كانت شاشة التليفون صغيرة */
-  padding: 12px 15px;
-  margin-bottom: 15px; /* مسافة بين كل حقل والثاني */
-  border: 1px solid #333;
-  border-radius: 8px;
-  background-color: #1a1a1a;
-  color: #fff;
-  font-size: 16px; /* مقاس 16px ممتاز جداً للموبايل عشان الهواتف (مثل آيفون) ما تعملش Zoom تلقائي مزعج عند الضغط على الـ input */
-  box-sizing: border-box; /* عشان الـ padding ما يخرجش بره الحدود */
-  outline: none;
-  transition: border-color 0.3s ease;
-}
+    /* تنسيق حقول الإدخال والـ Textarea */
+    form input,
+    form textarea {
+        width: 100%; 
+        padding: 12px 15px;
+        margin-bottom: 15px; 
+        border: 1px solid #333;
+        border-radius: 8px;
+        background-color: #1a1a1a;
+        color: #fff;
+        font-size: 16px; 
+        box-sizing: border-box; 
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
 
-/* تأثير خفيف لما العميل يضغط جوه الحقل */
-form input:focus,
-form textarea:focus {
-  border-color: #ff33aa; 
-}
+    form input:focus,
+    form textarea:focus {
+        border-color: #ff33aa; 
+    }
 
-/* تنسيق زر الإرسال */
-form .btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: #cf0a6c;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    form .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background-color: #cf0a6c;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-form .btn:hover {
-  opacity: 0.9;
-  background-color: #555454;
-}
+    form .btn:hover {
+        opacity: 0.9;
+        background-color: #555454;
+    }
 }
