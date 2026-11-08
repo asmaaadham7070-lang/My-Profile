@@ -312,84 +312,102 @@ img {
 /* ========================================== */
 /* إعدادات التجاوب مع الموبايل (Media Queries) */
 /* ========================================== */
-@media (max-width: 1500px) {
-    /* 1. ضبط الهيدر ليظهر بشكل ممتاز ومنظم على الموبايل */
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    body {
+        background-color: rgb(88, 81, 81);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* Header */
     header {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 8px 12px;
+        padding: 8px 10px;
+        height: 62px;
         width: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 900;
         box-sizing: border-box;
+        gap: 5px;
     }
 
-    /* تكبير وتنسيق روابط الهيدر لتكون واضحة */
-    header nav a, .a, .navigation {
-        font-size: 11px;
-        padding: 4px 8px;
+    header nav a,
+    .a,
+    .navigation {
+        font-size: 13px;
+        padding: 6px 5px;
     }
 
-    /* 2. تنظيم الـ Hero Section والـ Main */
-    .hero-container, main {
+    .navigation {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    /* Hero & Main */
+    .hero-container,
+    main {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 90px; /* مسافة كافية تحت الهيدر الثابت */
         width: 100%;
+        box-sizing: border-box;
+        padding: 75px 12px 20px;
+        gap: 15px;
+    }
+
+    /* Main Section */
+    .mein {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: auto;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        gap: 20px;
+    }
+
+    /* Cards */
+    .product-card,
+    .detail-card {
+        width: 95%;
+        max-width: 450px;
+        margin: 8px auto;
         box-sizing: border-box;
     }
 
-    /* 3. جعل الكروت تملأ عرض الشاشة بشكل مريح وبدون تصغير */
-    .product-card, .detail-card {
-        width: 90%;
-        max-width: 400px;
-        margin: 10px auto;
-    }
-
-    /* 4. جعل حاويات الكروت تعرض كارت واحد في السطر */
-    .projects-grid, .details-grid {
+    /* Cards Container */
+    .projects-grid,
+    .details-grid {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        gap: 15px;
     }
 
-    /* 5. ضبط العناوين لتناسب الشاشات الصغيرة */
-    .s, .flower-text {
-        font-size: 26px;
+    /* Headings */
+    .s,
+    .flower-text {
+        font-size: 30px;
     }
 
-    .navigation {
-        font-size: 12px;
-        display: flex;
-    }
-    .logo{
-        font-size: 17px;
-    }
-    body {
-    background-color: rgb(88, 81, 81);
-    display: flex;
-    flex-direction: column;  /* بيخلي العناصر ترصوص تحت بعضها عمودياً */
-    align-items: center;     /* بيسنتر كل العناصر في نص الشاشة أفقياً */
-    justify-content: flex-start; /* يبدأ المحتوى من فوق بمسافة مرتبة وتحت بعضه */
-    min-height: 100vh;       /* عشان الـ body ياخد طول الشاشة بالكامل */
-    margin: 0;               /* بيشيل أي هوامش افتراضية للمتصفح */
-}
-.mein {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 8%;
-}
-main {
-    padding-top: 70px; /* قللي الرقم ده لو كبير (مثلاً خليه 60px أو 70px بدل أرقام ضخمة) */
-}
 }
