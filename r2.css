@@ -10,11 +10,17 @@ html {
 }
 
 body {
-    background-color: rgb(175, 175, 175);
+    background-color: rgb(88, 81, 81);
+    display: flex;
+    flex-direction: column;  /* بيخلي العناصر ترصوص تحت بعضها عمودياً */
+    align-items: center;     /* بيسنتر كل العناصر في نص الشاشة أفقياً */
+    justify-content: flex-start; /* يبدأ المحتوى من فوق بمسافة مرتبة وتحت بعضه */
+    min-height: 100vh;       /* عشان الـ body ياخد طول الشاشة بالكامل */
+    margin: 0;               /* بيشيل أي هوامش افتراضية للمتصفح */
 }
 
 header {
-    background-color: #575656;
+    background-color: #423a3a;
     width: 100%;
     position: fixed;
     z-index: 999;
@@ -44,6 +50,34 @@ header {
     font-weight: 500;
     transition: color 0.3s ease;
 }
+/* الحاوية الرئيسية للجزئية دي */
+.hero-container {
+    display: flex;
+    flex-direction: column;  /* بيخلي العناصر تحت بعضها عمودياً */
+    align-items: center;     /* بيسنتر كل حاجة في النص أفقياً */
+    justify-content: center; /* توسيط رأسي لو محتاج */
+    margin-top: 15px;        /* مسافة بسيطة تحت الهيدر الثابت تقدري تزوديها أو تقلليها براحتك */
+    padding: 0;
+}
+.hero-image img {
+    width: 150px;            /* حجم الصورة بالموبايل */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;      /* شكل دائرى */
+    display: block;
+    margin: 0 auto;
+}
+.main-img {
+    display: block;
+    margin: 80px auto 0 auto; /* 20px مسافة بسيطة من فوق، واليمين والشمال auto عشان تتسنتر في النص */
+    max-width: 100%;           /* عشان ما تخرجش برة حدود الشاشة على الموبايل */
+}
+
+/* تنسيق جملة I'm Frontend تحت الصورة مباشرة */
+.hero-text {
+    text-align: center;
+    margin-top: 10px;        /* المسافة الصغيرة بين الصورة وجملة I'm Frontend */
+}
 
 .navigation a:hover {
     color: rgb(223, 216, 216);
@@ -69,14 +103,17 @@ section {
     object-fit: cover;
     object-position: top center;
     flex-shrink: 0; /* بيمنع مط أو ضغط الصورة */
-    border: 3px solid rgb(219, 70, 144);
-    box-shadow: 0 10px 25px rgba(219, 70, 144, 0.35);
+    border: 3px solid rgb(122, 118, 120);
+    box-shadow: 0 10px 25px rgba(141, 16, 78, 0.35);
     cursor: pointer;
     transition: all 0.4s ease;
+    justify-content: center;
+    margin: 15px;;
+    display: flex;
 }
 .profile-img:hover {
     transform: scale(1.05); /* تكبر بنسبة بسيطة ناعمة مع الحجم الكبيرة ده */
-    border-color: #ff1493;
+    border-color: #f5c6df;
     box-shadow: 0 15px 35px rgba(62, 59, 61, 0.6);
 }
 .mein h2 {
@@ -95,7 +132,7 @@ section {
 .btn {
     display: inline-block;
     padding: 10px 30px;
-    background-color: rgb(201, 29, 109);
+    background-color: rgb(46, 44, 46);
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
@@ -105,13 +142,20 @@ section {
     margin-bottom: 20px;
     transition: all 0.7s ease;
 }
+main {
+    padding-top: 70px; /* قللي الرقم ده لو كبير (مثلاً خليه 60px أو 70px بدل أرقام ضخمة) */
+}
+
 
 .btn:hover {
-    background-color: rgb(69, 69, 69);
+    background-color: rgb(110, 108, 108);
+}
+.min btn{
+    border: #fff;
 }
 
 .mein .btn:hover {
-    background: rgb(84, 77, 82);
+    background: rgb(150, 140, 148);
     transform: scale(1.1);
 }
 
@@ -163,14 +207,6 @@ section {
     transform: scale(1.05);
     box-shadow: 0 8px 16px 0 rgba(59, 37, 227, 0.2);
 }
-
-.icon {
-    font-size: 4em;
-    color: rgb(58, 86, 208);
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 .b {
     text-align: center;
     font-size: 1.2em;
@@ -179,10 +215,12 @@ section {
 
 img {
     width: 100%;
-    max-width: 250px;
-    height: 250px;
+    max-width: 280px;
+    height: 90px;
     object-fit: cover;
     border-radius: 15px;
+  width: 100px;
+
 }
 /* تنسيق السكشن الحاضن للكروت */
 .features-section {
@@ -211,7 +249,7 @@ img {
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(110, 109, 109, 0.4);
 }
 
 /* تنسيق الأيقونة */
@@ -253,14 +291,25 @@ img {
     
     
     /* الإطار الأبيض والبروز */
-    border: 1.5px solid #323030; 
+    border: 1.5px solid #665f5f; 
     border-radius: 8px; /* تدوير الحواف عشان يبان زرار احترافي */
     padding: 4px 10px; /* مساحة داخلية خفيفة حول النص */
     gap: 5px;
     transition: all 0.25s ease-in-out; /* نعومة الحركة */
     cursor: pointer;
 }
-
+.whatsapp{
+    background-color: #07791e;
+}
+.facebook{
+    background-color: rgb(47, 47, 218);
+}
+.telegram{   
+    background-color: rgb(64, 64, 198);
+}
+.linkedin{
+     background-color: rgb(75, 131, 214);
+}
 
 /* ========================================== */
 /* إعدادات التجاوب مع الموبايل (Media Queries) */
