@@ -302,9 +302,7 @@ img {
 .facebook{
     background-color: rgb(47, 47, 218);
 }
-.telegram{   
-    background-color: rgb(64, 64, 198);
-}
+
 .linkedin{
      background-color: rgb(75, 131, 214);
 }
@@ -331,7 +329,7 @@ img {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 8px 15px !important; /* زودنا الـ padding الجانبي عشان مفيش حاجة تاكل من اليمين والشمال */
+        padding: 3px 8px !important; /* زودنا الـ padding الجانبي عشان مفيش حاجة تاكل من اليمين والشمال */
         height: 62px;
         width: 100% !important;
         max-width: 100vw !important; /* بيمنع الهيدر يعدي عرض الشاشة */
@@ -355,17 +353,28 @@ body {
     overflow-x: hidden; /* بيقفل أي حركة أفقية أو مساحات فاضية عجنب الصفحة */
 }
 
-/* بيخلي أي صورة أو كارت أو فورم ملتزم بعرض الشاشة وميعديهاش أبداً */
-img, input, textarea, .feature-card, .projects.info {
-    max-width: 85% !important;
-    max-width: 280px !important; /* حجم ملموم وشيك جداً في نص الشاشة */
+/* 1. نرجع الـ img العامة والـ inputs لطبيعتهم وما نخليهمش ينكمشوا بزيادة */
+img {
+    max-width: 100% !important;
+    height: auto;
 }
-    header nav a,
-    .a,
-    .navigation {
-        font-size: 13px;
-        padding: 6px 5px;
-    }
+
+input, textarea, .feature-card, .projects.info {
+    width: 90% !important;
+    max-width: 300px !important; /* مقاس محترم ومريح للعين مش ميكروسكوبي */
+    box-sizing: border-box;
+}
+
+/* 2. تحكم خاص بالصورة الشخصية عشان ما تتخضيش منها وتكون بحجم رايق ومظبوط */
+.profile-img, .main-img img {
+    width: 200px !important;   /* عرض مناسب جداً وشيك */
+    height: 200px !important;  /* ارتفاع متساوي عشان تطلع دائرية مظبوطة */
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+    
 
     .navigation {
         display: flex;
