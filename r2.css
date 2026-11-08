@@ -377,8 +377,10 @@ input, textarea, .feature-card, .projects.info {
     
 
     .navigation {
-        font-size: 10px;
+        font-size: 7px;
         display: flex;
+        margin-left: auto;
+    
     }
 
     .logo {
