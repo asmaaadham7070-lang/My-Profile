@@ -329,6 +329,7 @@ header {
     width: 100%;
     position: fixed;
     z-index: 999;
+    font-size: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -371,13 +372,13 @@ input, textarea, .feature-card, .projects.info {
     
 
     .navigation {
+        font-size: 10px;
         display: flex;
-        align-items: center;
-        gap: 2px;
     }
 
     .logo {
-        font-size: 19px;
+        font-size: 17px;
+        display: flex;
     }
 
     /* Hero & Main */
