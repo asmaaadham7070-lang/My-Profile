@@ -150,9 +150,7 @@ main {
 .btn:hover {
     background-color: rgb(110, 108, 108);
 }
-.min btn{
-    border: #fff;
-}
+
 
 .mein .btn:hover {
     background: rgb(150, 140, 148);
@@ -314,7 +312,7 @@ img {
 /* ========================================== */
 /* إعدادات التجاوب مع الموبايل (Media Queries) */
 /* ========================================== */
-@media (max-width: 900px) {
+@media (max-width: 1500px) {
     /* 1. ضبط الهيدر ليظهر بشكل ممتاز ومنظم على الموبايل */
     header {
         display: flex;
@@ -374,4 +372,24 @@ img {
     .logo{
         font-size: 17px;
     }
+    body {
+    background-color: rgb(88, 81, 81);
+    display: flex;
+    flex-direction: column;  /* بيخلي العناصر ترصوص تحت بعضها عمودياً */
+    align-items: center;     /* بيسنتر كل العناصر في نص الشاشة أفقياً */
+    justify-content: flex-start; /* يبدأ المحتوى من فوق بمسافة مرتبة وتحت بعضه */
+    min-height: 100vh;       /* عشان الـ body ياخد طول الشاشة بالكامل */
+    margin: 0;               /* بيشيل أي هوامش افتراضية للمتصفح */
+}
+.mein {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 8%;
+}
+main {
+    padding-top: 70px; /* قللي الرقم ده لو كبير (مثلاً خليه 60px أو 70px بدل أرقام ضخمة) */
+}
 }
