@@ -393,6 +393,7 @@ img {
     .logo {
         font-size: 14px;
         display: flex;
+          white-space: nowrap;
     }
 
     /* Hero & Main */
