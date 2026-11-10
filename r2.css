@@ -337,15 +337,9 @@ img {
     header {
         background-color: #423a3a;
         width: 100%;
-        position: fixed;
-        top: 0 ;
-        left: 0 ;
-        right: 0;
         z-index: 999;
         display: flex;
-         gap: 5px;
         justify-content: space-between;
-        align-items: center;
         padding: 4px 6% ; /* قللنا الـ padding شوية عشان العناصر تاخد براحها */
         box-shadow: 0 4px 5px #e8aad28f;
         margin: 0 ;
@@ -373,9 +367,7 @@ img {
     }
     
     .navigation {
-        display: flex;
         flex: 1;
-        justify-content: space-around;
         min-width: 0;
         gap: 2px;
        margin: auto;
@@ -386,7 +378,7 @@ img {
 
     .navigation a {
         font-size: 10px;
-        padding: 4px 3px;
+        padding: 3px 2px;
         white-space: nowrap;
         flex-shrink: 1;
          
@@ -397,7 +389,7 @@ img {
         font-size: 15px;
         flex-shrink: 0 ;
           white-space: nowrap;
-          margin-right: auto;
+          
     }
 
     /* Hero & Main */
