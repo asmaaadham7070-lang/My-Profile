@@ -392,6 +392,7 @@ img {
         font-size: 14px;
         display: flex;
           white-space: nowrap;
+          margin-right: auto;
     }
 
     /* Hero & Main */
