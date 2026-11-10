@@ -377,15 +377,16 @@ img {
     .navigation {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 5px;
         margin: 0;
         font-size: 12px;
+        
     }
 
     .navigation a {
         font-size: 11px;
         white-space: nowrap;
-         display: flex;
+         
          
     }
 
