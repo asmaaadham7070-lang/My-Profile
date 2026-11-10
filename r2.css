@@ -377,6 +377,7 @@ img {
     .navigation {
         display: flex;
         align-items: center;
+        margin-left: auto;
        
 
 
@@ -384,7 +385,7 @@ img {
     }
 
     .navigation a {
-        font-size: 11px;
+        font-size: 10px;
         white-space: nowrap;
          
          
