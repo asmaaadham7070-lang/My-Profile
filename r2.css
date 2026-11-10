@@ -383,13 +383,14 @@ img {
     }
 
     .navigation a {
-        margin-left: 0;
-        font-size: 13px;
+        font-size: 11px;
         white-space: nowrap;
+         display: flex;
+         
     }
 
     .logo {
-        font-size: 17px;
+        font-size: 14px;
         display: flex;
     }
 
