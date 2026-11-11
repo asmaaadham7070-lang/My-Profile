@@ -335,9 +335,10 @@ img {
         z-index: 999;
         display: flex;
         justify-content: space-between;
-        padding: 2px 2% ; /* قللنا الـ padding شوية عشان العناصر تاخد براحها */
+        padding: 3px ; /* قللنا الـ padding شوية عشان العناصر تاخد براحها */
         box-shadow: 0 4px 5px #e8aad28f;
-        margin: 0 ;
+       
+        
     }
 
     /* نرجع الـ img العامة والـ inputs لطبيعتهم */
@@ -364,7 +365,7 @@ img {
     .navigation {
         flex: 1;
         min-width: 0;
-        gap: 2px;
+        gap: -1px;
        margin: auto;
  display: flex;
 
