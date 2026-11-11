@@ -333,9 +333,9 @@ img {
         background-color: #423a3a;
         width: 100%;
         z-index: 999;
-        display: flex;
+        
         justify-content: space-between;
-        padding: 3px ; /* قللنا الـ padding شوية عشان العناصر تاخد براحها */
+        padding: 3px 1px; /* قللنا الـ padding شوية عشان العناصر تاخد براحها */
         box-shadow: 0 4px 5px #e8aad28f;
        
         
@@ -436,4 +436,7 @@ img {
     .flower-text {
         font-size: 30px;
     }
+
+
+    
 }
