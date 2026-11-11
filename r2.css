@@ -381,6 +381,7 @@ img {
         padding: 3px 2px;
         white-space: nowrap;
         flex-shrink: 1;
+        display: flex;
          
          
     }
