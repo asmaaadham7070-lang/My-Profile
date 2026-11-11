@@ -325,12 +325,7 @@ img {
         min-height: 100vh;
         margin: 0;
         width: 100%;
-        max-width: 100vw;
-    }
-
-    /* بيمنع أي عنصر يهرب بزيادة */
-    * {
-        box-sizing: border-box;
+    
     }
 
     /* Header */
@@ -377,7 +372,7 @@ img {
     }
 
     .navigation a {
-        font-size: 10px;
+        font-size: 13px;
         padding: 2px 1px;
         white-space: nowrap;
         flex-shrink: 1;
